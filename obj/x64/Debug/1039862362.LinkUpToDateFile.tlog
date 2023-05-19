@@ -1,0 +1,1 @@
+g++ -o "/root/projects/CCompiler/bin/x64/Debug/CCompiler.out" -Wl,--no-undefined -Wl,-z,relro -Wl,-z,now -Wl,-z,noexecstack /root/projects/CCompiler/obj/x64/Debug/main.o

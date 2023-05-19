@@ -1,0 +1,115 @@
+﻿生成启动时间为 2023/5/18 15:36:49。
+日志记录详细程度设置为: Normal。     1>项目“E:\WorkProjects\CCompiler\CCompiler\CCompiler.vcxproj”在节点 2 上(Rebuild 个目标)。
+     1>_PrepareForClean:
+         正在删除文件“E:\WorkProjects\CCompiler\CCompiler\obj\x64\Debug\CCompiler.tlog\CCompiler.lastbuildstate”。
+       InitializeBuildStatus:
+         正在创建“E:\WorkProjects\CCompiler\CCompiler\obj\x64\Debug\CCompiler.tlog\unsuccessfulbuild”，因为已指定“AlwaysCreate”。
+       _ValidateSources:
+         正在验证源
+       _CopySources:
+         正在将源远程复制到“192.168.10.150”
+         正在将文件“E:\WorkProjects\CCompiler\CCompiler\main.c”复制到“/root/projects/CCompiler/main.c”
+       _ValidateCompatibleRemoteArchitectures:
+         正在验证体系结构
+       _ValidateValidArchitecture:
+         正在验证体系结构
+         当前项目体系结构“x64”兼容远程系统体系结构“x64”(“x86_64”)。
+       ClCompile:
+         正在启动远程生成
+         正在编译源:
+         正在调用“g++”
+         g++ -c -x c /root/projects/CCompiler/main.c -g2 -gdwarf-2 -o "/root/projects/CCompiler/obj/x64/Debug/main.o" -Wall -Wswitch -W"no-deprecated-declarations" -W"empty-body" -Wconversion -W"return-type" -Wparentheses -W"no-pointer-sign" -W"no-format" -Wuninitialized -W"unreachable-code" -W"unused-function" -W"unused-value" -W"unused-variable" -O0 -fno-strict-aliasing -fno-omit-frame-pointer -fexceptions -std=c11
+         main.c
+         已完成编译“/root/projects/CCompiler/main.c”
+         /root/projects/CCompiler/main.c: 在函数‘next’中:
+         /root/projects/CCompiler/main.c:63:5: 警告：建议在用作真值的赋值语句前后加上括号 [-Wparentheses]
+              while (token = *src) {
+              ^
+         /root/projects/CCompiler/main.c:90:96: 警告：‘size_t’转换自‘long int’时可能会改变结果的符号 [-Wsign-conversion]
+                          if (current_id[Hash] == hash && !memcmp((char*)current_id[Name], last_pos, src - last_pos)) {
+                                                                                                         ^
+         /root/projects/CCompiler/main.c:150:21: 警告：‘char’转换自‘intptr_t’时可能改变值 [-Wconversion]
+                              *data++ = token_val;
+                              ^
+         /root/projects/CCompiler/main.c: 在函数‘expression’中:
+         /root/projects/CCompiler/main.c:356:29: 警告：‘long unsigned int’转换自‘long int’时可能会改变结果的符号 [-Wsign-conversion]
+                      data = (char*)(((int)data + sizeof(int)) & (-sizeof(int)));
+                                      ^
+         /root/projects/CCompiler/main.c: 在函数‘global_declaration’中:
+         /root/projects/CCompiler/main.c:1146:9: 警告：未使用的变量‘i’ [-Wunused-variable]
+              int i; // tmp
+                  ^
+         /root/projects/CCompiler/main.c: 在函数‘eval’中:
+         /root/projects/CCompiler/main.c:1235:9: 警告：‘char’转换自‘intptr_t’时可能改变值 [-Wconversion]
+                  else if (op == SC) { ax = *(char*)*sp++ = ax; }                       // save character to address, value in ax, address on stack
+                  ^
+         /root/projects/CCompiler/main.c:1267:9: 警告：隐式声明函数‘open’ [-Wimplicit-function-declaration]
+                  else if (op == OPEN) { ax = open((char*)sp[1], sp[0]); }
+                  ^
+         /root/projects/CCompiler/main.c:1268:9: 警告：隐式声明函数‘close’ [-Wimplicit-function-declaration]
+                  else if (op == CLOS) { ax = close(*sp); }
+                  ^
+         /root/projects/CCompiler/main.c:1269:9: 警告：隐式声明函数‘read’ [-Wimplicit-function-declaration]
+                  else if (op == READ) { ax = read(sp[2], (char*)sp[1], *sp); }
+                  ^
+         /root/projects/CCompiler/main.c:1271:49: 警告：‘size_t’转换自‘intptr_t’时可能会改变结果的符号 [-Wsign-conversion]
+                  else if (op == MALC) { ax = (int)malloc(*sp); }
+                                                          ^
+         /root/projects/CCompiler/main.c:1272:65: 警告：‘int’转换自‘intptr_t’时可能改变值 [-Wconversion]
+                  else if (op == MSET) { ax = (int)memset((char*)sp[2], sp[1], *sp); }
+                                                                          ^
+         /root/projects/CCompiler/main.c:1272:70: 警告：‘size_t’转换自‘intptr_t’时可能会改变结果的符号 [-Wsign-conversion]
+                  else if (op == MSET) { ax = (int)memset((char*)sp[2], sp[1], *sp); }
+                                                                               ^
+         /root/projects/CCompiler/main.c:1273:72: 警告：‘size_t’转换自‘intptr_t’时可能会改变结果的符号 [-Wsign-conversion]
+                  else if (op == MCMP) { ax = memcmp((char*)sp[2], (char*)sp[1], *sp); }
+                                                                                 ^
+         /root/projects/CCompiler/main.c: 在函数‘main’中:
+         /root/projects/CCompiler/main.c:1298:5: 警告：‘size_t’转换自‘intptr_t’时可能会改变结果的符号 [-Wsign-conversion]
+              if (!(text = old_text = malloc(poolsize))) {
+              ^
+         /root/projects/CCompiler/main.c:1302:5: 警告：‘size_t’转换自‘intptr_t’时可能会改变结果的符号 [-Wsign-conversion]
+              if (!(data = malloc(poolsize))) {
+              ^
+         /root/projects/CCompiler/main.c:1306:5: 警告：‘size_t’转换自‘intptr_t’时可能会改变结果的符号 [-Wsign-conversion]
+              if (!(stack = malloc(poolsize))) {
+              ^
+         /root/projects/CCompiler/main.c:1310:5: 警告：‘size_t’转换自‘intptr_t’时可能会改变结果的符号 [-Wsign-conversion]
+              if (!(symbols = malloc(poolsize))) {
+              ^
+         /root/projects/CCompiler/main.c:1315:5: 警告：‘size_t’转换自‘intptr_t’时可能会改变结果的符号 [-Wsign-conversion]
+              memset(text, 0, poolsize);
+              ^
+         /root/projects/CCompiler/main.c:1316:5: 警告：‘size_t’转换自‘intptr_t’时可能会改变结果的符号 [-Wsign-conversion]
+              memset(data, 0, poolsize);
+              ^
+         /root/projects/CCompiler/main.c:1317:5: 警告：‘size_t’转换自‘intptr_t’时可能会改变结果的符号 [-Wsign-conversion]
+              memset(stack, 0, poolsize);
+              ^
+         /root/projects/CCompiler/main.c:1318:5: 警告：‘size_t’转换自‘intptr_t’时可能会改变结果的符号 [-Wsign-conversion]
+              memset(symbols, 0, poolsize);
+              ^
+         /root/projects/CCompiler/main.c:1352:5: 警告：‘size_t’转换自‘intptr_t’时可能会改变结果的符号 [-Wsign-conversion]
+              if (!(src = old_src = malloc(poolsize))) 
+              ^
+         /root/projects/CCompiler/main.c:1382:16: 警告：‘int’转换自‘intptr_t’时可能改变值 [-Wconversion]
+              return eval();
+                         ^
+         
+       Link:
+         正在链接对象
+         正在调用“ld”
+         g++ -o "/root/projects/CCompiler/bin/x64/Debug/CCompiler.out" -Wl,--no-undefined -Wl,-z,relro -Wl,-z,now -Wl,-z,noexecstack /root/projects/CCompiler/obj/x64/Debug/main.o
+         已完成链接，输出文件名:“/root/projects/CCompiler/bin/x64/Debug/CCompiler.out”
+         正在将文件“/root/projects/CCompiler/bin/x64/Debug/CCompiler.out”复制到“E:\WorkProjects\CCompiler\CCompiler\bin\x64\Debug\CCompiler.out”
+         CCompiler.vcxproj -> E:\WorkProjects\CCompiler\CCompiler\bin\x64\Debug\CCompiler.out
+       FinalizeBuildStatus:
+         正在删除文件“E:\WorkProjects\CCompiler\CCompiler\obj\x64\Debug\CCompiler.tlog\unsuccessfulbuild”。
+         正在对“E:\WorkProjects\CCompiler\CCompiler\obj\x64\Debug\CCompiler.tlog\CCompiler.lastbuildstate”执行 Touch 任务。
+     1>已完成生成项目“E:\WorkProjects\CCompiler\CCompiler\CCompiler.vcxproj”(Rebuild 个目标)的操作。
+
+已成功生成。
+    0 个警告
+    0 个错误
+
+已用时间 00:00:01.12
